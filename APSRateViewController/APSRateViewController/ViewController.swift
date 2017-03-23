@@ -12,9 +12,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        self.view.backgroundColor = UIColor.blue
-        
+        // Do any additional setup after loading the view, typically from a nib.        
     }
 
     override func didReceiveMemoryWarning() {
@@ -23,10 +21,28 @@ class ViewController: UIViewController {
     }
 
     override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
+    func presentRatingsView(theme:UIColor){
         let ratingVC = APSRateViewController()
+        ratingVC.themeColor = theme
+        ratingVC.ratingTitle = "Demo"
         let navigationController = UINavigationController(rootViewController: ratingVC)
         self.present(navigationController, animated: true, completion: nil)
     }
-
+    
+    @IBAction func orangeTheme(_ sender: Any) {
+        presentRatingsView(theme:UIColor.orange)
+    }
+    
+    @IBAction func whiteTheme(_ sender: Any) {
+        presentRatingsView(theme: UIColor.white)
+    }
+    
+    @IBAction func blackTheme(_ sender: Any) {
+        presentRatingsView(theme: UIColor.black)
+    }
+    
 }
 
