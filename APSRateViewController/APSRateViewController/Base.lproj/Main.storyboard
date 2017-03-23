@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C68" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="XCD-iR-RT1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -9,6 +9,22 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="BAV-2N-c3A">
+            <objects>
+                <navigationController id="XCD-iR-RT1" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3s9-GF-XRu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Log-8m-SRV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sb8-I1-wZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-940" y="137"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,14 +39,15 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IhK-uf-4Ao">
                                 <rect key="frame" x="153" y="313" width="70" height="40"/>
+                                <color key="backgroundColor" red="0.9137254901960784" green="0.0048263021877833776" blue="0.22734385899135046" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="BRB-x8-K52"/>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="Vlm-gX-cbe"/>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="iQX-Dt-3cB"/>
                                     <constraint firstAttribute="height" constant="40" id="tcN-em-MQN"/>
                                 </constraints>
-                                <state key="normal" title="White">
-                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Red">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="whiteTheme:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hne-zp-ONC"/>
@@ -53,12 +70,12 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwK-Lj-dXU">
                                 <rect key="frame" x="153" y="393" width="70" height="40"/>
-                                <color key="backgroundColor" red="0.92912079015544047" green="0.6950773537711542" blue="0.14188742934894563" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.61960784313725492" blue="0.75294117647058822" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="70" id="9Ex-VP-xLd"/>
                                     <constraint firstAttribute="height" constant="40" id="xXG-we-rXe"/>
                                 </constraints>
-                                <state key="normal" title="Orange">
+                                <state key="normal" title="Blue">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -78,6 +95,7 @@
                             <constraint firstItem="IhK-uf-4Ao" firstAttribute="trailing" secondItem="UtB-3M-U4u" secondAttribute="trailing" id="uoK-pz-TjD"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="krB-Hz-H1Y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

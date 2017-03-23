@@ -20,6 +20,7 @@ class APSRateViewController: UIViewController {
     var ratingDiscriptionDictionary:[String]?
     var themeColor:UIColor! = UIColor.white
     var ratingTitle:String! = "Rating"
+    var defaultRating:Float! = 3.5
     let borderColor = UIColor(red:233/255, green:233/255, blue:233/255, alpha:1)
     
     override func viewDidLoad() {
@@ -61,6 +62,9 @@ class APSRateViewController: UIViewController {
     }
     
     func applyThemeWithColor(theme:UIColor){
+        self.navigationController?.navigationBar.barTintColor = theme
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = UIColor.white
         self.noteView.layer.borderColor = borderColor.cgColor
         self.submitBtn.backgroundColor = theme
         self.submitBtn.setTitleColor(UIColor.white, for:.normal)
@@ -76,6 +80,7 @@ class APSRateViewController: UIViewController {
     
     func customizeSlider() {
         self.ratingSlider.customizeSlider()
+        self.ratingSlider.value = defaultRating
         self.ratingSlider.addTarget(self, action: #selector(ratingDidChange), for:.valueChanged)
     }
     
