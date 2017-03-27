@@ -10,7 +10,7 @@ This is a component to create a simple feedback/rating view for a user. The star
 
 ### Manual Installation
 
-Just drag and drop the folder, APSGroupedTableView into your project.
+Just drag and drop the folder, APSRateViewController into your project.
 
 ### License
 MIT License
