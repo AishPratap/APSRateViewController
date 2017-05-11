@@ -11,16 +11,16 @@ import UIKit
 
 class APSRateViewController: UIViewController {
     
-    
-    
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var noteView: UITextView!
     @IBOutlet weak var ratingTextLabel: UILabel!
     @IBOutlet weak var ratingSlider: APSRateSlider!
+    
     var ratingDiscriptionDictionary:[String]?
     var themeColor:UIColor! = UIColor.white
     var ratingTitle:String! = "Rating"
     var defaultRating:Float! = 3.5
+    
     let borderColor = UIColor(red:233/255, green:233/255, blue:233/255, alpha:1)
     
     override func viewDidLoad() {
@@ -82,9 +82,8 @@ class APSRateViewController: UIViewController {
         self.ratingSlider.customizeSlider()
         self.ratingSlider.value = defaultRating
         self.ratingSlider.addTarget(self, action: #selector(ratingDidChange), for:.valueChanged)
+        updateLabelForRating(rating: defaultRating)
     }
-    
-    
     
     func ratingDidChange(sender:AnyObject) {
         
